@@ -462,6 +462,12 @@ textarea {
 .form-wrapper {
   background-color: var(--main-brand-pop-colour);
 } 
+legend {
+  font-size: 2em;
+}
+.form-title {
+  font-size: 1em;
+}
 form h2 {
   color: var(--main-white-colour);
   text-shadow: -2px 2px 9px rgba(0, 0, 0, 0.57);
