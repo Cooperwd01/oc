@@ -1,7 +1,7 @@
 :root { 
   --font-family: 'Inter', sans-serif;
   --font-secondary: 'Fjalla One', sans-serif;
-  --main-brand-dark-colour: #2A324B;
+  /* --main-brand-dark-colour: #2A324B; */
   --main-brand-pop-colour: #181923;
   --main-brand-pop-two-colour: #62B3D4;
   --main-brand-background-color: #E7D7C1;
@@ -51,7 +51,7 @@ span.sub-h1 {
   font-weight: 600;
   font-family: var(--font-secondary);
   font-size: 2.5rem;
-  color: var(--main-brand-dark-colour);
+  color: var(--main-brand-pop-colour);
 }
 p {
   line-height: 1.5;
@@ -63,7 +63,7 @@ p {
 }
 .title-font{
   font-family: var(--font-secondary);
-  color: var(--main-brand-dark-colour);;
+  color: var(--main-brand-pop-colou);
   font-size: 3.5em;
 }  
 @media only screen and (max-width:991px) {
@@ -259,6 +259,9 @@ input:focus, textarea:focus{
 input[type=text], input[type=email], textarea{
   color:#191919 !important;
 }
+textarea {
+  outline: 5px solid transparent;
+}
 .btn-color {
   background-color:var(--main-white-colour);
   border: 4px solid #36453B; 
@@ -418,7 +421,7 @@ input[type=text], input[type=email], textarea{
 .contact-input {
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  outline:5px solid transparent
+  outline: 3px solid transparent;
 }
 
 .contact-input:focus {
@@ -457,7 +460,7 @@ input[type=text], input[type=email], textarea{
 }
 
 .form-wrapper {
-  background-color: var(--lilac);
+  background-color: var(--main-brand-pop-colour);
 } 
 form h2 {
   color: var(--main-white-colour);
