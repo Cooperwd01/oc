@@ -1,0 +1,236 @@
+@font-face {
+  font-family: "Woodland-light";
+  src: url("/fonts/woodland-light.otf");
+  src: url("/fonts/woodland-light.woff") format("woff"),
+  url("/fonts/woodland-light.otf") format("opentype")
+}
+
+@font-face {
+  font-family: "Woodland-bold";
+  src: url("/fonts/woodland-bold.otf");
+  src: url("/fonts/woodland-bold.woff") format("woff"),
+  url("/fonts/woodland-bold.otf") format("opentype")
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+html, body {
+  font-family: "Inter", sans-serif;
+}
+
+/* nav styles */
+.brand-text, .nav-link {
+  color: #36453B !important;
+}
+
+h1, h2 {
+  font-family: "Woodland-bold", sans-serif;
+}
+
+#title-container-wrapper{
+  background-color: #36453b;
+  background-image: url("/img/jb-img/navy.png");
+}
+
+.title-font{
+  font-family: "Woodland-bold", sans-serif;
+  font-size: 4rem;
+  text-shadow: -3px 3px 4px rgba(0, 0, 0, 1);
+}
+span.sub-h1{
+  font-family: "Woodland-bold", sans-serif;
+  color: #dbad6a;
+  font-size: 3rem;
+  text-shadow: -3px 3px 4px rgba(0, 0, 0, 1);
+}
+
+p {
+  font-family: "Inter", sans-serif;
+}
+
+#title-container-wrapper{
+  align-items: center;
+  text-align: center;
+}
+
+.banner-img {
+  width:90%;
+  display:block;
+  margin:0 auto;
+  box-shadow: 40px 40px 0px -23px rgba(219,173,106,1);
+  -webkit-box-shadow: 40px 40px 0px -23px rgba(219,173,106,1);
+  -moz-box-shadow: 40px 40px 0px -23px rgba(219,173,106,1);
+}
+
+@media only screen and (max-width:767px) {
+  .banner-img {
+    width:80%;
+    display:block;
+    box-shadow: 40px 40px 0px -23px rgba(219,173,106,1);
+    -webkit-box-shadow: 40px 40px 0px -23px rgba(219,173,106,1);
+    -moz-box-shadow: 40px 40px 0px -23px rgba(219,173,106,1);
+  }
+  p, ul > li {
+    font-size: 16px;
+  }
+}
+
+.logo-img {
+  width: 40%;
+  display:inline-block;
+  padding:10px;
+  margin: 0 auto;
+}
+@media only screen and (min-width:768px) {
+  .logo-img {
+    width: 100%;
+  }
+}
+@media only screen and (min-width:992px) {
+  .logo-img {
+    width: 200px;
+  }
+}
+
+/* contact form */
+.contact-input {
+  border: 3px solid #36453B;
+  border-radius: 0px; 
+}
+
+.contact-input:focus {
+  outline: 3px solid #DBAD6A;
+  border: 5px solid #36453B;
+}
+
+.button-img{
+  width: 32px;
+  margin-right: 10px;
+}
+.btn-color:hover {
+  background-color: #DBAD6A;
+  color: #36453B;
+  border: 4px solid #fff;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 19%), 0 6px 6px rgb(0 0 0 / 23%);
+}
+
+.form-wrapper {
+  background-color: #5d2e46;
+  background-image: url("/img/jb-img/xv.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+} 
+
+/* footer */ 
+.footer-style{
+  background-color: transparent;
+  border-top:5px solid #36453b;
+}
+
+
+/* credit section */
+/* my styles */
+
+.credit-section {
+  background-color: #fff;
+}
+.flip-card-back > h2 {
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  padding: 10px;
+}
+.flip-card-back > p {
+  font-size: 14px;
+  padding: 0px 10px;
+  margin-bottom: 1rem;
+}
+.credit-img{
+  width:100%;
+}
+
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+@media only screen and (max-width:767px) {
+  .flip-card {
+    width: 170px;
+    height: 170px;
+  }
+  .flip-card-back > h2 {
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    padding: 5px;
+  }
+  .flip-card-back > p {
+    font-size: 13px;
+    padding: 0px 5px;
+    margin-bottom: 5px;
+  }
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #36453b;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+
+.credit--radio::before {
+  content: "🔈";
+  margin-right: 15px;
+}
+.credit--tv::before {
+  content: "📺";
+  margin-right: 15px;
+}
+.credit--online::before {
+  content: "📱";
+  margin-right: 15px;
+
+}
+/* new colours 
+
+cinnamon satin: #CE6A85;
+sugar plum: #985277;
+powder blue: #A9D2D5;
+earth yellow: #DBAD6A;
+kombu green: #36453B;
+
+*/
