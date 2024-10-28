@@ -1,14 +1,23 @@
 :root { 
-  font-family: 'Inter', sans-serif;
+  --font-family: 'Inter', sans-serif;
+  --font-secondary: 'Fjalla One', sans-serif;
+  --main-brand-dark-colour: #2A324B;
+  --main-brand-pop-colour: #181923;
+  --main-brand-pop-two-colour: #62B3D4;
+  --main-brand-background-color: #E7D7C1;
+  --main-white-colour: #fff;
+  --yellow: #f9d70b;
+  --lilac: #766791;
 }
+
 @supports (font-variation-settings: normal) {
   :root { 
-    font-family: 'Inter var', sans-serif;
+    font-family: var(--font-family);
   }
 }
 
 html, body {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family);
   margin: 0px;
   font-size:19px;
   scroll-behavior: smooth; 
@@ -23,13 +32,14 @@ html, body {
 /* HEADER CSS */
 header {
   background-color: transparent;
-  background: #C32F27;
+  background: var(--main-brand-pop-colour);
+  border-bottom: 3px solid var(--main-white-colour);
 }
 .brand-text, .nav-link {
-  color: #fff !important;
+  color: var(--main-white-colour) !important;
 }
 h1, h2, h3, h4, h5 {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: var(--font-secondary);
 }
 h2 {
   font-size: 2em;
@@ -39,21 +49,21 @@ h3 {
 }
 span.sub-h1 {
   font-weight: 600;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: var(--font-secondary);
   font-size: 2.5rem;
-  color: #333;
+  color: var(--main-brand-dark-colour);
 }
 p {
   line-height: 1.5;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family)
 }
 #social-icon-wrapper {
   text-align: center;
   width: 100%;
 }
 .title-font{
-  font-family: 'Fjalla One', sans-serif;
-  color: #333;
+  font-family: var(--font-secondary);
+  color: var(--main-brand-dark-colour);;
   font-size: 3.5em;
 }  
 @media only screen and (max-width:991px) {
@@ -67,11 +77,16 @@ p {
   }
 }  
 a.skip-link {
-  background-color: #fff;
+  background-color: var(--yellow);
+  color: var(--black);
   font-size: 18px;
   padding: 10px;
   margin-bottom:30px;
-} 
+  width:100%;
+  display:block;
+  border-bottom: solid 2px var(--black);
+  outline: none;
+}
 .nav-img{
   width: 80px;
   -webkit-filter: drop-shadow(-2px 3px 2px rgba(34, 34, 34, 0.4));
@@ -81,7 +96,7 @@ a.skip-link {
 /* Navbar */
 .nav-title {
   font-family: 'Fjalla One', sans-serif;
-  color: #fff;
+  color: var(--main-white-colour);
   font-size: 1.35em;
   border-bottom: 2px solid transparent;
 }
@@ -105,7 +120,7 @@ a.skip-link {
   transition: all 0.7s;
 } 
 .navbar-dark .navbar-toggler .icon-bar {
-  background: #fff;
+  background: var(--main-white-colour);
 } 
 .navbar-toggler .icon-bar:nth-of-type(1) {
   transform: rotate(45deg);
@@ -137,18 +152,18 @@ button.navbar-toggler {
   margin-top: 8px !important;
 }
 button.navbar-toggler:focus {
-  outline: 2px solid #fff !important;
+  outline: 2px solid var(--main-white-colour) !important;
   border-radius: 0px;
 }
 button.navbar-toggler.collapsed:focus {
-  outline: 2px solid white;
+  outline: 2px solid var(--main-white-colour);
 }
 .nav-link {
   border-bottom: solid 2px transparent;
   text-decoration: none;
 } 
 .nav-link:focus{
-  outline: 2px solid #fff;
+  outline: 2px solid var(--main-white-colour);
 } 
 @media only screen and (max-width:767px) {
   .nav-item {
@@ -165,7 +180,7 @@ button.navbar-toggler.collapsed:focus {
   
 @media only screen and (min-width:768px) {
   a.nav-link {
-    font-family: 'Fjalla One', sans-serif;
+    font-family: var(--font-secondary);
     text-align: center;
     margin-left: 2em;
     outline: none;
@@ -176,8 +191,8 @@ button.navbar-toggler.collapsed:focus {
     -webkit-transition: border 0.5s linear;
     -moz-transition: border 0.5s linear;
     -o-transition: border 0.5s linear;
-    padding-right: 0px !important;
-    padding-left: 0px !important;
+    /* padding-right: 0px !important;
+    padding-left: 0px !important; */
    }
   .nav-link:hover{
     color: #36453B;
@@ -199,7 +214,7 @@ button.navbar-toggler.collapsed:focus {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #fff;
+  background-color: var(--main-white-colour);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -213,7 +228,7 @@ button.navbar-toggler.collapsed:focus {
 
 /* form style */
 form {
-  color: #fff;
+  color: var(--main-white-colour);
 }
 .form-style{
   background-color: transparent;
@@ -245,7 +260,7 @@ input[type=text], input[type=email], textarea{
   color:#191919 !important;
 }
 .btn-color {
-  background-color:#fff;
+  background-color:var(--main-white-colour);
   border: 4px solid #36453B; 
   transition: .2s ease-in-out;
   margin-top: 37px;
@@ -254,27 +269,27 @@ input[type=text], input[type=email], textarea{
 }
 .btn-color:hover {
   background-color:#36453B; 
-  border: 4px solid #fff;
-  color: #fff;
+  border: 4px solid var(--main-white-colour);
+  color: var(--main-white-colour);
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 .btn-color:focus{
-  outline: 3px solid white;
+  outline: 3px solid var(--main-white-colour);
   transition: none;
   box-shadow: none !important;
 }
 .btn-color:active{
-  background-color:#fff !important; 
+  background-color:var(--main-white-colour) !important; 
   border: 2px solid #36453B !important;
   color: #36453B !important;
-  outline: 3px solid white !important;
+  outline: 3px solid var(--main-white-colour) !important;
 }
 /* /. */
 
 /* FOOTER */
 .footer-style{
-  background-color: #F7B538;
-  border-top:5px solid #C32F27;
+  background-color: var(--main-brand-pop-two-colour);
+  border-top: 5px solid var(--main-brand-pop-colour);
   color: #333;
 }
 .footer-title {
@@ -291,7 +306,7 @@ input[type=text], input[type=email], textarea{
   color: #333;
   border-bottom:solid 2px transparent;
   font-size: 18px;
-  font-family: 'Fjalla One', sans-serif;
+  font-family: var(--font-secondary);
   padding: 2px;
   text-decoration: none;
 }
@@ -359,7 +374,7 @@ input[type=text], input[type=email], textarea{
 /* END OF FOOTER CSS */
 
 #title-container-wrapper{
-  background-color: #F7B538;
+  background-color: var(--main-brand-pop-two-colour);
   align-items: center;
   text-align: center;
 }
@@ -409,7 +424,7 @@ input[type=text], input[type=email], textarea{
 .contact-input:focus {
   border: none;
   border-radius: 5px;
-  outline: 5px solid #F7B538;
+  outline: 5px solid var(--main-brand-pop-two-colour);
 }
 
 .button-img{
@@ -428,7 +443,7 @@ input[type=text], input[type=email], textarea{
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 .btn-color:hover {
-  background-color: #F7B538;
+  background-color: var(--main-brand-pop-two-colour);
   color:#333;
   border-radius: 5px;
   border: none;
@@ -436,16 +451,16 @@ input[type=text], input[type=email], textarea{
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 .btn-color:focus {
-  background-color: #F7B538;
+  background-color: var(--main-brand-pop-two-colour);
   border: none;
-  outline: 5px solid #fff;
+  outline: 5px solid var(--main-white-colour);
 }
 
 .form-wrapper {
-  background-color: #780116;
+  background-color: var(--lilac);
 } 
 form h2 {
-  color: #fff;
+  color: var(--main-white-colour);
   text-shadow: -2px 2px 9px rgba(0, 0, 0, 0.57);
 }
 
@@ -476,7 +491,7 @@ form h2 {
 
 /* cards */
 .card {
-  background: #fff;
+  background: var(--main-white-colour);
   border-radius: 2px;
   display: inline-block;
   height: 300px;
